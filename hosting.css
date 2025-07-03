@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+position: absolute;
+top: 0;
+width: 100%;
+display: flex;
+justify-content: space-between; /* Space between logo and rest */
+align-items: center;
+padding: 20px;
+background: rgba(255, 255, 255, 0.1); /* Transparent white */
+border: 2px solid rgb(255, 172, 172); /* Light pink border */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+z-index: 1000; /* Keep it on top */
+}
+
+/* Logo Section */
+.logo {
+display: flex;
+align-items: center;
+font-size: 1.8rem; /* Larger font size */
+font-weight: bold;
+color: white;
+}
+
+.logo-img {
+height: 40px; /* Adjust logo size */
+width: auto;
+margin-right: 10px; /* Space between logo and text */
+}
+
+/* Navigation Links */
+.nav-links {
+list-style: none;
+display: flex;
+justify-content: center; /* Center navigation links */
+flex: 1; /* Take up available space between logo and Login */
+}
+
+.nav-links li {
+margin: 0 20px;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 1.2rem;
+font-weight: bold;
+color: white; /* Default text color */
+transition: color 0.3s, border-bottom 0.3s;
+padding-bottom: 5px;
+border-bottom: 2px solid transparent; /* Add underline effect */
+}
+
+.nav-links a:hover {
+color: #ff408c; /* Pink text color on hover */
+border-bottom: 2px solid #ff408c; /* Pink underline */
+}
+
+/* Login Button */
+.login-button {
+background: #ff408c; /* Bright pink background */
+color: white;
+font-size: 1.2rem;
+font-weight: bold;
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px 0px ; /* Rounded button */
+box-shadow: 0px 5px 15px rgba(255, 64, 140, 0.4); /* Glow effect */
+transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+background-color: #ff206a; /* Slightly darker pink */
+transform: scale(1.1); /* Zoom effect */
+color: white;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show menu on toggle */
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Highlighted Login Button */
+.nav-links .highlight {
+padding: 10px 20px;
+background-color: #ff408c; /* Bright pink for emphasis */
+color: white; /* White text */
+font-weight: bold;
+border-radius: 20px;
+box-shadow: 0px 5px 15px rgba(255, 64, 140, 0.4);
+transition: background-color 0.3s, transform 0.2s;
+text-decoration: none; /* Remove underline */
+}
+
+
+
+  a {
+    text-decoration: none;
+  }
+  
+  /* Header Section */
+  .blog-header {
+    position: relative;
+    background-image: url('wedding-background.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .header-content h1 {
+    font-size: 2.8rem;
+    margin: 20px 0;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    z-index: 1000;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .logo-img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ff408c;
+  }
+  
+  .login-button {
+    background: #ff408c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .login-button:hover {
+    background: white;
+    color: #ff408c;
+    border: 2px solid #ff408c;
+  }
+  
+  /* Blog Content */
+  .blog-content {
+    padding: 40px 20px;
+  }
+  
+  .content-container h2 {
+    color: #ff408c;
+  }
+  
+  .content-container p {
+    margin-bottom: 20px;
+  }
+  
+  /* Review Form */
+  .review-section {
+    padding: 40px 20px;
+    background-color: #ff408c;
+    color: white;
+    text-align: center;
+  }
+  
+  .review-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .review-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .review-form .submit-button {
+    background: white;
+    color: #ff408c;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .review-form .submit-button:hover {
+    background: #ff206a;
+    color: white;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff408c;
+    color: white;
+  }
+  

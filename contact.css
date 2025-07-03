@@ -1,0 +1,335 @@
+body {
+  height: 100%;
+  margin: 0 ;
+  font-family: Arial, sans-serif;
+}
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+position: absolute;
+top: 0;
+width: 100%;
+display: flex;
+justify-content: space-between; /* Space between logo and rest */
+align-items: center;
+padding: 20px;
+background: rgba(255, 255, 255, 0.1); /* Transparent white */
+border: 2px solid rgba(255, 192, 203, 0.5); /* Light pink border */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+z-index: 1000; /* Keep it on top */
+}
+
+/* Logo Section */
+.logo {
+display: flex;
+align-items: center;
+font-size: 1.8rem; /* Larger font size */
+font-weight: bold;
+color: white;
+}
+
+.logo-img {
+height: 50px; /* Adjust logo size */
+width: auto;
+margin-right: 0.5rem; /* Space between logo and text */
+}
+
+/* Navigation Links */
+.nav-links {
+list-style: none;
+display: flex;
+justify-content: center; /* Center navigation links */
+flex: 1; /* Take up available space between logo and Login */
+}
+
+.nav-links li {
+margin: 0 20px;
+}
+
+.nav-links a {
+text-decoration: none;
+font-size: 1.2rem;
+font-weight: bold;
+color: white; /* Default text color */
+transition: color 0.3s, border-bottom 0.3s;
+padding-bottom: 5px;
+border-bottom: 2px solid transparent; /* Add underline effect */
+}
+
+.nav-links a:hover {
+color: #ff408c; /* Pink text color on hover */
+border-bottom: 2px solid #ff408c; /* Pink underline */
+}
+
+/* Login Button */
+.login-button {
+background: #ff408c; /* Bright pink background */
+color: rgb(255, 255, 255);
+font-size: 1.2rem;
+font-weight: bold;
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 20px 0px; /* Rounded button */
+box-shadow: 0px 5px 15px rgba(255, 64, 140, 0.4); /* Glow effect */
+transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+background-color: #ff206a; /* Slightly darker pink */
+transform: scale(1.1); /* Zoom effect */
+color: white;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+.nav-links {
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  display: none; /* Hidden by default */
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.navbar.active .nav-links {
+  display: flex; /* Show menu on toggle */
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+}
+
+.main
+{
+    width: 100%;
+    height: 80vh;
+    background-image: url(image6.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: larger;
+}
+h1{
+    color: white;
+}
+h1:hover {
+  color:#ff408c;
+  filter: drop-shadow(0 0 25px rgb(227, 148, 185));
+}
+
+
+.contact-form {
+  margin: 4%;
+  display: flex;
+  justify-content: space-around;
+}
+.form h2{
+  font-family : cursive;
+  text-decoration: underline wavy #ff408c ;
+}
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  height: 2px;
+}
+form input,
+form textarea, 
+form button {
+  font-family: serif;
+  width: 70%;
+  height: 35px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ff408c;
+  border-radius: 4px;
+}
+form textarea{
+  width:100%;
+  height: 20%;
+}
+
+.sendbutton{
+    font-size: 1rem;
+    color: #fff;
+    background: #ff408c;
+    border-radius: 5px;
+   
+    cursor: pointer;
+    height: 40px;
+    
+}
+.sendbutton:hover{
+
+    color: rgb(9, 8, 8);
+    opacity: 0.8;
+}
+
+  
+ 
+.map {
+ padding: 5px;
+  
+}
+.map h2 {
+   text-decoration: underline wavy #ff408c ;
+}
+
+
+.contact-section {
+  background-image: url(image\ 5.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+  margin: 50px auto;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+.contact-section h1 { 
+  color: #ff408c; 
+} 
+.contact-section p { 
+  color:black; 
+}
+
+
+.contact-info {
+   display: flex;
+   justify-content: space-around;  
+} 
+
+.item {
+      min-width: 250px;
+      margin: 20px; 
+}
+.item h2 { 
+      color: #333; 
+}
+.item:hover{
+  cursor: pointer;
+  filter: drop-shadow(0 0 25px rgb(179, 55, 113));
+}
+.item a:hover{
+  color: #ff408c;
+}
+
+.icon {
+  font-size: 40px; 
+  margin-bottom: 10px; 
+}
+
+/* Footer */
+footer {
+  background-color: #fddfe4;
+  color: #000; /* Black */
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 calc(25% - 2rem);
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  color: #ff408c; /* Gold */
+  margin-bottom: 0.5rem;
+}
+
+.footer-section .divider {
+  width: 50px;
+  height: 2px;
+  background: #ff408c; /* Gold */
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section img {
+  color: #000000; /* Dark gray */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #000000; /* Dark gray */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff408c; /*Dark pink*/
+}
+
+.footer-section.qr-code img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-width: 2;
+  border-top: 3px solid #ff408c;
+  border-bottom: 3px solid #ff408c;
+  border-left: 3px solid #ff408c;
+  border-right: 3px solid #ff408c;
+}
+.footer-section.qr-code p{
+  text-align: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #ffc0cb;/*light pink*/
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .footer-section {
+      min-width: 100%;
+  }
+}
+  
+
